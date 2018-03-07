@@ -7,6 +7,7 @@ import * as actions from '../../actions';
 
 const FormItem = Form.Item;
 const { Content } = Layout;
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;

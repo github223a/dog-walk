@@ -1,0 +1,11 @@
+.table {
+	padding-top: 30px;
+}
+
+.table-header-email {
+	flex-basis: 6%;
+}
+
+.table-header-name {
+	flex-basis: 5%;
+}
