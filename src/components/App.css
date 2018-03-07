@@ -3,19 +3,7 @@
 	width: 100%;
 }
 
-.table-header-email {
-	flex-basis: 100%;
-	flex-grow: 1;
-	text-align: center;
-}
-
-.table-header-name {
-	flex-basis: 100%;
-	flex-grow: 1;
-	text-align: center;
-}
-
-.table-header-id {
+.table-header {
 	flex-basis: 100%;
 	flex-grow: 1;
 	text-align: center;
@@ -25,4 +13,5 @@
 	display: flex;
 	justify-content: center;
 	font-weight: bold;
+	font-size: 26px;
 }

@@ -50,9 +50,9 @@ class Content extends React.Component {
                     <div className="table">
                         <h2 className="table-main-header">Users</h2>
                         <Headers className="table-headers">
-                            <span className="table-header-id">ID</span>
-                            <span className="table-header-name">Name</span>
-                            <span className="table-header-email">Email</span>
+                            <span className="table-header table-header-id">ID</span>
+                            <span className="table-header table-header-name">Name</span>
+                            <span className="table-header table-header-email">Email</span>
                         </Headers>
                         { this.props.users.map(({ id, name, email }) => (<Users key={id} id={id} name={name} email={email}/>)) }
                     </div>
