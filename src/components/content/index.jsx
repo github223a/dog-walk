@@ -15,13 +15,11 @@ const Headers = styled.div`
     font-weight: bold;
 `;
 
-const Header = styled.span`
-`;
-
 class Content extends React.Component {
     state = {
-        users: []
+        active: false
     }
+
     handleClick = e => {
       e.preventDefault();
       this.props.dispatch(actions.logout());
@@ -30,7 +28,7 @@ class Content extends React.Component {
     getUsers = e => {
         e.preventDefault();
         this.props.dispatch(actions.getUsers());
-        this.setState({ users: this.props.users });
+        this.setState({ active: !this.state.active });
     }
     render() {
       return (
@@ -39,16 +37,17 @@ class Content extends React.Component {
               <Icon type="left" />Log out
             </Button>
             <Button type="primary" onClick={this.getUsers}>
-                <Icon type="user" />Get Users
+                <Icon type="user" />{this.state.active ? 'Off table' : 'Get users'}
             </Button>
-            { this.state.users.length ?
+            { this.state.active ?
                 <div className="table">
+                    <h2 className="table-main-header">Users</h2>
                     <Headers className="table-headers">
-                        <Header className="table-header-id">ID</Header>
-                        <Header className="table-header-name">Name</Header>
-                        <Header className="table-header-email">Email</Header>
+                        <span className="table-header-id">ID</span>
+                        <span className="table-header-name">Name</span>
+                        <span className="table-header-email">Email</span>
                     </Headers>
-                    { this.props.users.map(item => (<Users key={item.id} id={item.id} name={item.name} email={item.email}/>)) }
+                    { this.props.users.map(({ id, name, email }) => (<Users key={id} id={id} name={name} email={email}/>)) }
                 </div>
                 : null
             }
@@ -57,5 +56,5 @@ class Content extends React.Component {
     }
 }
 
-export default connect(store => ({ isAuth: !!store.user.token, users: store.users }))(Form.create()(Content));
+export default connect(store => ({ users: store.users }))(Form.create()(Content));
 

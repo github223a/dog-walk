@@ -10,7 +10,6 @@ const User = styled.div`
 export default class Users extends React.Component {
     state = {}
 
-
     render() {
         const { id, name, email } = this.props;
         return <User className="table-users-data">

@@ -33,7 +33,7 @@ const user = (store = {}, action) => {
 const users = (store = {}, action) => {
     switch (action.type) {
         case 'getUsers':
-            return usersList.map(item => ({ id: item.id, name: item.name, email: item.email }));
+            return usersList.map(({ id, name, email }) => ({ id: id, name: name, email: email }));
         default:
             return []
     }

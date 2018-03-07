@@ -9,3 +9,9 @@
 .table-header-name {
 	flex-basis: 5%;
 }
+
+.table-main-header {
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
