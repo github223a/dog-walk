@@ -20,34 +20,34 @@ const Title = styled.span`
 `;
 
 class Login extends React.Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const email = this.props.form.getFieldValue('email');
-    const password = this.props.form.getFieldValue('password');
-
-    this.props.dispatch(actions.login(email, password));
-  };
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.isAuth) {
       this.props.history.push('/');
     }
   }
 
-  render() {
-    const { getFieldDecorator } = this.props.form;
+    handleSubmit = (e) => {
+      e.preventDefault();
+      const email = this.props.form.getFieldValue('email');
+      const password = this.props.form.getFieldValue('password');
 
-    return (
-      <Content>
-        <Wrapper>
-          <Card
-            style={{ width: '40%' }}
-            type="inner"
-            title={<Title>Авторизация</Title>}
-          >
-            <Form onSubmit={this.handleSubmit}>
-              <FormItem label="E-mail">
-                {getFieldDecorator('email', {
+      this.props.dispatch(actions.login(email, password));
+    };
+
+    render() {
+      const { getFieldDecorator } = this.props.form;
+
+      return (
+        <Content>
+          <Wrapper>
+            <Card
+              style={{ width: '40%' }}
+              type="inner"
+              title={<Title>Авторизация</Title>}
+            >
+              <Form onSubmit={this.handleSubmit}>
+                <FormItem label="E-mail">
+                  {getFieldDecorator('email', {
                   rules: [
                     {
                       required: true,
@@ -58,9 +58,9 @@ class Login extends React.Component {
                     },
                   ],
                 })(<Input prefix={<Icon type="mail" />} />)}
-              </FormItem>
-              <FormItem label="Password">
-                {getFieldDecorator('password', {
+                </FormItem>
+                <FormItem label="Password">
+                  {getFieldDecorator('password', {
                   rules: [
                     {
                       required: true,
@@ -68,16 +68,16 @@ class Login extends React.Component {
                     },
                   ],
                 })(<Input type="password" prefix={<Icon type="key" />} />)}
-              </FormItem>
-              <Button type="primary" htmlType="submit">
+                </FormItem>
+                <Button type="primary" htmlType="submit">
                 Log in
-              </Button>
-            </Form>
-          </Card>
-        </Wrapper>
-      </Content>
-    );
-  }
+                </Button>
+              </Form>
+            </Card>
+          </Wrapper>
+        </Content>
+      );
+    }
 }
 
 export default connect(store => ({ isAuth: !!store.user.token }))(Form.create()(Login));
