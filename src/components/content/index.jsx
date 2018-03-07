@@ -8,17 +8,14 @@ import * as actions from '../../actions';
 class Content extends React.Component {
     handleClick = (e) => {
       e.preventDefault();
-      console.log('this = ', this);
-      this.props.dispatch(actions.logout(this.props.store.user.token));
+      this.props.dispatch(actions.logout());
     }
     render() {
       return (
         <div>
-          <Link to="/login">
             <Button type="primary" onClick={this.handleClick}>
-              <Icon type="left" />Go back
+              <Icon type="left" />Log out
             </Button>
-          </Link>
         </div>
       );
     }

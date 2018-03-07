@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import Login from './login/index.jsx';
-import Main from './content';
+import Content from './content';
 
 const Routing = ({ Component, isAuth, ...rest }) => (
   <Route
@@ -31,7 +31,7 @@ const App = () => (
   <Router>
     <Switch>
       <Route path="/login" component={Login} />
-      <PrivateRoute Component={Main} />
+      <PrivateRoute Component={Content} />
     </Switch>
   </Router>
 );
