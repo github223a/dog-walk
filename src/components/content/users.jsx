@@ -7,15 +7,21 @@ const User = styled.div`
   padding-top: 10px;
 `;
 
+const Span = styled.span`
+    flex-grow: 1;
+	text-align: center;
+	flex-basis: 100%;
+`;
+
 export default class Users extends React.Component {
     state = {}
 
     render() {
         const { id, name, email } = this.props;
         return <User className="table-users-data">
-            <span>{id}</span>
-            <span>{name}</span>
-            <span>{email}</span>
+            <Span>{id}</Span>
+            <Span>{name}</Span>
+            <Span>{email}</Span>
         </User>
     }
 }

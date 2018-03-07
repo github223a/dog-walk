@@ -1,13 +1,24 @@
 .table {
 	padding-top: 30px;
+	width: 100%;
 }
 
 .table-header-email {
-	flex-basis: 6%;
+	flex-basis: 100%;
+	flex-grow: 1;
+	text-align: center;
 }
 
 .table-header-name {
-	flex-basis: 5%;
+	flex-basis: 100%;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.table-header-id {
+	flex-basis: 100%;
+	flex-grow: 1;
+	text-align: center;
 }
 
 .table-main-header {
