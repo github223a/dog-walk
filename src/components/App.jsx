@@ -7,9 +7,8 @@ import {
   Switch,
 } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import Login from './Login';
-import Main from './Content';
-import Main2 from './Content';
+import Login from './login/index.jsx';
+import Main from './content';
 
 const Routing = ({ Component, isAuth, ...rest }) => (
   <Route
@@ -33,7 +32,6 @@ const App = () => (
     <Switch>
       <Route path="/login" component={Login} />
       <PrivateRoute Component={Main} />
-      <PrivateRoute path="/lala" Component={Main2} />
     </Switch>
   </Router>
 );

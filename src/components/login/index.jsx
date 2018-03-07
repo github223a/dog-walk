@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Card, Layout, Button, Form, Input, Icon } from 'antd';
 import { connect } from 'react-redux';
 import 'antd/dist/antd.css';
+import * as actions from '../../actions';
 
 const FormItem = Form.Item;
 const { Content } = Layout;
@@ -18,13 +19,13 @@ const Title = styled.span`
   justify-content: center;
 `;
 
-class Login extends Component {
+class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const email = this.props.form.getFieldValue('email');
-    const pass = this.props.form.getFieldValue('password');
+    const password = this.props.form.getFieldValue('password');
 
-    this.props.dispatch({ type: 'getUser', email, pass });
+    this.props.dispatch(actions.login(email, password));
   };
 
   componentWillReceiveProps(nextProps) {
@@ -69,7 +70,7 @@ class Login extends Component {
                 })(<Input type="password" prefix={<Icon type="key" />} />)}
               </FormItem>
               <Button type="primary" htmlType="submit">
-                Войти
+                Log in
               </Button>
             </Form>
           </Card>
