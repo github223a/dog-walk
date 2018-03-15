@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 import usersList from '../fixtures/users';
+import * as actions from '../actions';
 
 const findUser = action => usersList.find(user => user.email === action.email && user.password === action.password);
 const generateToken = () => Math.random().toString(36).substring(7);
 
 const user = (store = {}, action) => {
   switch (action.type) {
-    case 'login':
+    case actions.LOGIN:
       const user = findUser(action);
 
       if (user) {
@@ -15,7 +16,7 @@ const user = (store = {}, action) => {
       }
       return {};
 
-    case 'logout':
+    case actions.LOGOUT:
       return {};
 
     default:
@@ -23,12 +24,15 @@ const user = (store = {}, action) => {
   }
 };
 
-const users = (store = {}, action) => {
+const users = (store = [], action) => {
     switch (action.type) {
-        case 'getUsers':
+        case actions.GET_USERS:
             return usersList.map(({ id, name, email }) => ({ id: id, name: name, email: email }));
+
+      case actions.DELETE_USER:
+          return store.filter(item => item.id !== action.id);
         default:
-            return []
+            return store;
     }
 }
 

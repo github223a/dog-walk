@@ -9,6 +9,7 @@ import {
 import 'antd/dist/antd.css';
 import Login from './login/index.jsx';
 import Content from './content';
+import EditCardForm from './editCardForm';
 
 const Routing = ({ Component, isAuth, ...rest }) => (
   <Route
@@ -31,6 +32,7 @@ const App = () => (
   <Router>
     <Switch>
       <Route path="/login" component={Login} />
+      <PrivateRoute exact path="/edit/:id" component={EditCardForm} />
       <PrivateRoute Component={Content} />
     </Switch>
   </Router>

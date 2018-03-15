@@ -4,6 +4,12 @@ import { Button, Icon, Form } from 'antd';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import UserCard from '../card/';
+import styled from 'styled-components';
+
+const LogoutButton = styled(Button)`
+  margin-right: 20px;
+  
+`;
 
 class Content extends React.Component {
     state = {
@@ -24,16 +30,16 @@ class Content extends React.Component {
       return (
         <div className="content">
             <div className="content__buttons">
-                <Button className="content__buttons__log-out" type="primary" onClick={this.handleClick}>
+                <LogoutButton className="content__buttons__log-out" type="primary" onClick={this.handleClick}>
                   <Icon type="left" />Log out
-                </Button>
+                </LogoutButton>
                 <Button className="content__buttons__get-users" type="primary" onClick={this.getUsers}>
                     <Icon type="user" />{this.state.active ? 'Off table' : 'Get users'}
                 </Button>
             </div>
             { this.state.active ?
                 <div className="content__users-cards">
-                    { this.props.users.map(({ id, name, email }) => (<UserCard key={id} name={name} email={email}/>)) }
+                    { this.props.users.map(({ id, name, email }) => (<UserCard key={id} id={id} name={name} email={email}/>)) }
                 </div>
                 : null
             }

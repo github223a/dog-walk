@@ -10,10 +10,10 @@
     justify-content: space-around;
   }
 
-  &:hover {
-    transform: rotate(-15deg);
-    animation: shadow 2s infinite ease-in-out;
-  }
+  //&:hover {
+  //  transform: rotate(-15deg);
+  //  animation: shadow 2s infinite ease-in-out;
+  //}
 }
 
 @keyframes shadow {

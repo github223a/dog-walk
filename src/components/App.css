@@ -13,9 +13,6 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-around; }
-  .user-card:hover {
-    transform: rotate(-15deg);
-    animation: shadow 2s infinite ease-in-out; }
 
 @keyframes shadow {
   from {
@@ -35,7 +32,6 @@
   justify-content: center;
   align-items: center; }
   .content__buttons {
-    width: 20%;
     padding-top: 20px;
     display: flex;
     justify-content: space-around; }
