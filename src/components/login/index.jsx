@@ -51,7 +51,7 @@ class Login extends React.Component {
                       type: 'email',
                     },
                   ],
-                })(<Input prefix={<Icon type="mail" defaultValue="name1@mail.ru" value="name1@mail.ru"/>} />)}
+                })(<Input prefix={<Icon type="mail"/>} />)}
                 </FormItem>
                 <FormItem label="Password">
                   {getFieldDecorator('password', {
@@ -62,7 +62,7 @@ class Login extends React.Component {
                       message: 'Please enter password',
                     },
                   ],
-                })(<Input type="password" prefix={<Icon type="key" defaultValue="111"/>} />)}
+                })(<Input type="password" prefix={<Icon type="key" />} />)}
                 </FormItem>
                 <Button type="primary" htmlType="submit">
                 Log in
