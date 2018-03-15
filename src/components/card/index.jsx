@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Button, Icon } from 'antd';
-import EditCardForm from '../editCardForm/';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {connect} from "react-redux";
 import * as actions from '../../actions';
 

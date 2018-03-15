@@ -8,7 +8,6 @@ import styled from 'styled-components';
 
 const LogoutButton = styled(Button)`
   margin-right: 20px;
-  
 `;
 
 class Content extends React.Component {
