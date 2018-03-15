@@ -23,6 +23,11 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+
+.userCard {
+	/*animation: rotates 2s infinite ease-in-out;*/
+}
+
 .userCard:hover {
 	transform: rotate(-15deg);
 	animation: shadow 2s infinite ease-in-out;
@@ -38,4 +43,8 @@
 	from { transform: translateX(30px) }
 	50% { transform: translateX(-30px) }
 	to { transform: translateX(0px) }
+}
+
+@keyframes rotates {
+	from { transform: rotate(720deg) }
 }
