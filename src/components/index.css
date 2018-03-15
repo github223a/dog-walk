@@ -1,12 +1,11 @@
-.user-card {
-  /*animation: rotates 2s infinite ease-in-out;*/ }
-  .user-card__actions {
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-around; }
-  .user-card:hover {
-    transform: rotate(-15deg);
-    animation: shadow 2s infinite ease-in-out; }
+.user-card__actions {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around; }
+
+.user-card:hover {
+  transform: rotate(-15deg);
+  animation: shadow 2s infinite ease-in-out; }
 
 @keyframes shadow {
   from {
@@ -23,14 +22,10 @@
   justify-content: space-around;
   flex-wrap: wrap; }
 
-/*@keyframes moves {*/
-/*from { transform: translateX(30px) }*/
-/*50% { transform: translateX(-30px) }*/
-/*to { transform: translateX(0px) }*/
-/*}*/
-/*@keyframes rotates {*/
-/*from { transform: rotate(720deg) }*/
-/*}*/
+@keyframes rotates {
+  from {
+    transform: rotate(720deg); } }
+
 .table {
   padding-top: 30px;
   width: 100%; }

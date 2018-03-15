@@ -1,12 +1,18 @@
-.user-card {
-  /*animation: rotates 2s infinite ease-in-out;*/ }
-  .user-card__actions {
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-around; }
-  .user-card:hover {
-    transform: rotate(-15deg);
-    animation: shadow 2s infinite ease-in-out; }
+.user-card__actions {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around; }
+
+.user-card:hover {
+  transform: rotate(-15deg);
+  animation: shadow 2s infinite ease-in-out; }
+
+.users-cards {
+  width: 100%;
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
 
 @keyframes shadow {
   from {
@@ -16,18 +22,6 @@
   to {
     text-shadow: 0 0 3px black; } }
 
-.cards {
-  width: 100%;
-  padding-top: 2em;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-
-/*@keyframes moves {*/
-/*from { transform: translateX(30px) }*/
-/*50% { transform: translateX(-30px) }*/
-/*to { transform: translateX(0px) }*/
-/*}*/
-/*@keyframes rotates {*/
-/*from { transform: rotate(720deg) }*/
-/*}*/
+@keyframes rotates {
+  from {
+    transform: rotate(720deg); } }

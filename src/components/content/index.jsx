@@ -57,7 +57,7 @@ class Content extends React.Component {
                         </Headers>
                         { this.props.users.map(({ id, name, email }) => (<User key={id} id={id} name={name} email={email}/>)) }
                     </div>
-                    <div className="cards">
+                    <div className="users-cards">
                         { this.props.users.map(({ id, name, email }) => (<UserCard key={id} name={name} email={email}/>)) }
                     </div>
                 </Wrapper>
