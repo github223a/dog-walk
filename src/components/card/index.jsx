@@ -2,8 +2,9 @@ import React from 'react';
 import { Card, Button, Icon } from 'antd';
 import EditCardForm from '../editCardForm/';
 import { Redirect } from 'react-router-dom';
+import {connect} from "react-redux";
 
-export default class Index extends React.Component {
+class UserCard extends React.Component {
 
     handleEditClick = () => {
 
@@ -28,3 +29,6 @@ export default class Index extends React.Component {
         )
     }
 }
+
+export default connect()(UserCard);
+

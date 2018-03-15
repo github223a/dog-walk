@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from "react-redux";
+import {Form} from "antd/lib/index";
 
 class EditCardForm extends React.Component {
 
@@ -10,4 +11,5 @@ class EditCardForm extends React.Component {
     }
 }
 
-const PrivateRoute = connect(store => ({ users: store.users }))(EditCardForm);
+export default connect()(EditCardForm);
+
