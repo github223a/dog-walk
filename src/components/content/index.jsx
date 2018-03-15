@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import styled from 'styled-components';
 import Users from './users';
+import UsersCards from './Cards';
 
 const Headers = styled.div`
     display: flex;
@@ -16,7 +17,7 @@ const Headers = styled.div`
 
 const Wrapper = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
@@ -55,6 +56,9 @@ class Content extends React.Component {
                             <span className="table-header table-header-email">Email</span>
                         </Headers>
                         { this.props.users.map(({ id, name, email }) => (<Users key={id} id={id} name={name} email={email}/>)) }
+                    </div>
+                    <div className="usersCards">
+                        { this.props.users.map(({ id, name, email }) => (<UsersCards key={id} name={name} email={email}/>)) }
                     </div>
                 </Wrapper>
                 : null

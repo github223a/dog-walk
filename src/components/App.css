@@ -15,3 +15,27 @@
 	font-weight: bold;
 	font-size: 26px;
 }
+
+.usersCards {
+	width: 100%;
+	padding-top: 5em;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.userCard:hover {
+	transform: rotate(-15deg);
+	animation: shadow 2s infinite ease-in-out;
+}
+
+@keyframes shadow {
+	from {text-shadow: 0 0 3px black;}
+	50% {text-shadow: 0 0 30px black;}
+	to {text-shadow: 0 0 3px black;}
+}
+
+@keyframes moves {
+	from { transform: translateX(30px) }
+	50% { transform: translateX(-30px) }
+	to { transform: translateX(0px) }
+}
