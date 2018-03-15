@@ -9,15 +9,15 @@ const FormItem = Form.Item;
 const { Content } = Layout;
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 `;
 
 const Title = styled.span`
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 `;
 
 class Login extends React.Component {

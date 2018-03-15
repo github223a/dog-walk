@@ -4,8 +4,8 @@ import { Button, Icon, Form } from 'antd';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import styled from 'styled-components';
-import Users from './users';
-import UsersCards from './Cards';
+import User from '../user/index';
+import UserCard from '../card/index';
 
 const Headers = styled.div`
     display: flex;
@@ -49,16 +49,16 @@ class Content extends React.Component {
             { this.state.active ?
                 <Wrapper>
                     <div className="table">
-                        <h2 className="table-main-header">Users</h2>
-                        <Headers className="table-headers">
-                            <span className="table-header table-header-id">ID</span>
-                            <span className="table-header table-header-name">Name</span>
-                            <span className="table-header table-header-email">Email</span>
+                        <h2 className="table__title">Users</h2>
+                        <Headers className="table__headers">
+                            <span className="table__headers__id">ID</span>
+                            <span className="table__headers__name">Name</span>
+                            <span className="table__headers__email">Email</span>
                         </Headers>
-                        { this.props.users.map(({ id, name, email }) => (<Users key={id} id={id} name={name} email={email}/>)) }
+                        { this.props.users.map(({ id, name, email }) => (<User key={id} id={id} name={name} email={email}/>)) }
                     </div>
-                    <div className="usersCards">
-                        { this.props.users.map(({ id, name, email }) => (<UsersCards key={id} name={name} email={email}/>)) }
+                    <div className="cards">
+                        { this.props.users.map(({ id, name, email }) => (<UserCard key={id} name={name} email={email}/>)) }
                     </div>
                 </Wrapper>
                 : null

@@ -13,10 +13,10 @@ const Span = styled.span`
 	flex-basis: 100%;
 `;
 
-export default class Users extends React.Component {
+export default class Index extends React.Component {
     render() {
         const { id, name, email } = this.props;
-        return <User className="table-users-data">
+        return <User class="user">
             <Span>{id}</Span>
             <Span>{name}</Span>
             <Span>{email}</Span>

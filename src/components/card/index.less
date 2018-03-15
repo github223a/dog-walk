@@ -1,0 +1,48 @@
+.user-card {
+  /*animation: rotates 2s infinite ease-in-out;*/
+  &__actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &:hover {
+    transform: rotate(-15deg);
+    animation: shadow 2s infinite ease-in-out;
+  }
+}
+
+@keyframes shadow {
+  from {text-shadow: 0 0 3px black;}
+  50% {text-shadow: 0 0 30px black;}
+  to {text-shadow: 0 0 3px black;}
+}
+
+.cards {
+  width: 100%;
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+//.userCard:hover {
+//  transform: rotate(-15deg);
+//  animation: shadow 2s infinite ease-in-out;
+//}
+
+/*@keyframes moves {*/
+/*from { transform: translateX(30px) }*/
+/*50% { transform: translateX(-30px) }*/
+/*to { transform: translateX(0px) }*/
+/*}*/
+
+/*@keyframes rotates {*/
+/*from { transform: rotate(720deg) }*/
+/*}*/
+
+//.user-card__actions {
+//  padding-top: 20px;
+//  display: flex;
+//  justify-content: space-around;
+//}
