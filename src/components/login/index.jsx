@@ -20,7 +20,7 @@ class Login extends React.Component {
     }
   }
 
-    handleSubmit = (e) => {
+    handleSubmit = e => {
       e.preventDefault();
       const email = this.props.form.getFieldValue('email');
       const password = this.props.form.getFieldValue('password');
@@ -41,6 +41,7 @@ class Login extends React.Component {
               <Form onSubmit={this.handleSubmit}>
                 <FormItem label="E-mail">
                   {getFieldDecorator('email', {
+                  initialValue: 'name1@mail.ru',
                   rules: [
                     {
                       required: true,
@@ -54,7 +55,8 @@ class Login extends React.Component {
                 </FormItem>
                 <FormItem label="Password">
                   {getFieldDecorator('password', {
-                  rules: [
+                    initialValue: '111',
+                    rules: [
                     {
                       required: true,
                       message: 'Please enter password',

@@ -1,13 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import Login from './login/index.jsx';
+import Login from './login/';
 import Content from './content';
 import EditCardForm from './editCardForm';
 
@@ -32,7 +27,7 @@ const App = () => (
   <Router>
     <Switch>
       <Route path="/login" component={Login} />
-      <PrivateRoute exact path="/edit/:id" component={EditCardForm} />
+      <PrivateRoute path="/edit/:id" Component={EditCardForm} />
       <PrivateRoute Component={Content} />
     </Switch>
   </Router>
