@@ -1,0 +1,17 @@
+.table {
+  padding-top: 30px;
+  width: 100%; }
+  .table__title {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 26px; }
+  .table__headers * {
+    flex-basis: 100%;
+    flex-grow: 1;
+    text-align: center; }
+
+.table__headers__id {
+  flex-basis: 100%;
+  flex-grow: 1;
+  text-align: center; }

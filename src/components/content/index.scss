@@ -10,16 +10,18 @@
   }
 
   &__headers {
-    flex-basis: 100%;
-    flex-grow: 1;
-    text-align: center;
+    * {
+      flex-basis: 100%;
+      flex-grow: 1;
+      text-align: center;
+    }
+   }
+}
 
-    //&__id {
-    //  //flex-basis: 100%;
-    //  //flex-grow: 1;
-    //  //text-align: center;
-    //}
-  }
+.table__headers__id {
+  flex-basis: 100%;
+  flex-grow: 1;
+  text-align: center;
 }
 
 //.table-header {
