@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Button, Icon, Form, Card } from 'antd';
+import { Card } from 'antd';
 
 const gridStyle = {
     width: '20%',
