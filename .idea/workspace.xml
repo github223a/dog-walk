@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ae59b1-3dc4-48e6-a4df-9ceaf0fbc752" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/card/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/login/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/Cards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -177,7 +166,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="352" />
     <option name="y" value="79" />
     <option name="width" value="1568" />
@@ -275,14 +264,14 @@
   <component name="ToolWindowManager">
     <frame x="352" y="79" width="1568" height="960" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24951394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24951394" />
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3269461" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3269461" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
