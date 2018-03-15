@@ -1,18 +1,21 @@
-.user-card__actions {
-  padding-top: 20px;
+.authorization {
   display: flex;
-  justify-content: space-around; }
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+  .authorization__card {
+    width: 40%; }
 
-.user-card:hover {
-  transform: rotate(-15deg);
-  animation: shadow 2s infinite ease-in-out; }
-
-.users-cards {
-  width: 100%;
-  padding-top: 2em;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
+.user-card {
+  width: 20%;
+  text-align: center; }
+  .user-card__actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around; }
+  .user-card:hover {
+    transform: rotate(-15deg);
+    animation: shadow 2s infinite ease-in-out; }
 
 @keyframes shadow {
   from {
@@ -26,20 +29,20 @@
   from {
     transform: rotate(720deg); } }
 
-.table {
-  padding-top: 30px;
-  width: 100%; }
-  .table__title {
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .content__buttons {
+    width: 20%;
+    padding-top: 20px;
     display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 26px; }
-  .table__headers * {
-    flex-basis: 100%;
-    flex-grow: 1;
-    text-align: center; }
-
-.table__headers__id {
-  flex-basis: 100%;
-  flex-grow: 1;
-  text-align: center; }
+    justify-content: space-around; }
+  .content__users-cards {
+    width: 100%;
+    padding-top: 2em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: fade_out 5s infinite; }

@@ -1,5 +1,9 @@
 .user-card {
+  width: 20%;
+  text-align: center;
+
   //animation: rotates 2s infinite ease-in-out;
+
   &__actions {
     padding-top: 20px;
     display: flex;
@@ -10,14 +14,6 @@
     transform: rotate(-15deg);
     animation: shadow 2s infinite ease-in-out;
   }
-}
-
-.users-cards {
-  width: 100%;
-  padding-top: 2em;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 @keyframes shadow {

@@ -1,10 +1,7 @@
 import React from 'react';
 import { Card, Button, Icon } from 'antd';
-
-const gridStyle = {
-    width: '20%',
-    textAlign: 'center',
-};
+import EditCardForm from '../editCardForm/';
+import { Redirect } from 'react-router-dom';
 
 export default class Index extends React.Component {
 
@@ -17,7 +14,7 @@ export default class Index extends React.Component {
     }
 
     render() {
-        return (<Card className="user-card" title={this.props.name} style={gridStyle}>
+        return (<Card className="user-card" title={this.props.name}>
                 {this.props.email}
                 <div className="user-card__actions">
                     <Button className="user-card__actions__edit" type="primary" onClick={this.handleEditClick}>

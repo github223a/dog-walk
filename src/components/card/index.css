@@ -1,18 +1,13 @@
-.user-card__actions {
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-around; }
-
-.user-card:hover {
-  transform: rotate(-15deg);
-  animation: shadow 2s infinite ease-in-out; }
-
-.users-cards {
-  width: 100%;
-  padding-top: 2em;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
+.user-card {
+  width: 20%;
+  text-align: center; }
+  .user-card__actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around; }
+  .user-card:hover {
+    transform: rotate(-15deg);
+    animation: shadow 2s infinite ease-in-out; }
 
 @keyframes shadow {
   from {

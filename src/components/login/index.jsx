@@ -8,13 +8,6 @@ import * as actions from '../../actions';
 const FormItem = Form.Item;
 const { Content } = Layout;
 
-const Wrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-`;
-
 const Title = styled.span`
     display: flex;
     justify-content: center;
@@ -40,9 +33,8 @@ class Login extends React.Component {
 
       return (
         <Content>
-          <Wrapper>
-            <Card
-              style={{ width: '40%' }}
+          <div className="authorization">
+            <Card className="authorization__card"
               type="inner"
               title={<Title>Авторизация</Title>}
             >
@@ -75,7 +67,7 @@ class Login extends React.Component {
                 </Button>
               </Form>
             </Card>
-          </Wrapper>
+          </div>
         </Content>
       );
     }
