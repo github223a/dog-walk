@@ -52,8 +52,8 @@ class EditCardForm extends React.Component {
                           title={<Title>Edit form</Title>}
                           width="100%"
                     >
-                        <Form>
-                            <FormItem label="E-mail">
+                        <Form onSubmit={this.handleSubmit(task.id)}>
+                            <FormItem label="New e-mail">
                                 {getFieldDecorator('email', {
                                     initialValue: task.email,
                                     rules: [
@@ -67,7 +67,7 @@ class EditCardForm extends React.Component {
                                     ],
                                 })(<Input prefix={<Icon type="mail"/>} />)}
                             </FormItem>
-                            <FormItem label="Name">
+                            <FormItem label="New name">
                                 {getFieldDecorator('name', {
                                     initialValue: task.name,
                                     rules: [
@@ -78,11 +78,11 @@ class EditCardForm extends React.Component {
                                     ],
                                 })(<Input type="text" prefix={<Icon type="smile-o" />} />)}
                             </FormItem>
-                            <Link to="/">
+                            {/*<Link to="/">*/}
                                 <Button type="primary" htmlType="submit">
                                     Save
                                 </Button>
-                            </Link>
+                            {/*</Link>*/}
                         </Form>
                     </EdictCard>
             </ContentCard>

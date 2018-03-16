@@ -8,6 +8,10 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-around;
+
+    * {
+      margin-right: 20px;
+    }
   }
 
   &__users-cards {

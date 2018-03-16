@@ -13,7 +13,7 @@ const Title = styled.span`
     justify-content: center;
 `;
 
-class Login extends React.Component {
+class Registration extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.isAuth) {
       this.props.history.push('/');
@@ -25,7 +25,7 @@ class Login extends React.Component {
       const email = this.props.form.getFieldValue('email');
       const password = this.props.form.getFieldValue('password');
 
-      this.props.dispatch(actions.login(email, password));
+      this.props.dispatch(actions.register(email, password));
     };
 
     render() {
@@ -33,10 +33,10 @@ class Login extends React.Component {
 
       return (
         <Content>
-          <div className="authorization">
-            <Card className="authorization__card"
+          <div className="registration">
+            <Card className="registration"
               type="inner"
-              title={<Title>Авторизация</Title>}
+              title={<Title>Регистрация</Title>}
             >
               <Form onSubmit={this.handleSubmit}>
                 <FormItem label="E-mail">
@@ -53,6 +53,17 @@ class Login extends React.Component {
                   ],
                 })(<Input prefix={<Icon type="mail"/>} />)}
                 </FormItem>
+                  <FormItem label="Name">
+                      {getFieldDecorator('name', {
+                          initialValue: 'lalala',
+                          rules: [
+                              {
+                                  required: true,
+                                  message: 'Please enter name',
+                              }
+                          ],
+                      })(<Input prefix={<Icon type="aliwangwang-o"/>} />)}
+                  </FormItem>
                 <FormItem label="Password">
                   {getFieldDecorator('password', {
                     initialValue: '111',
@@ -65,7 +76,7 @@ class Login extends React.Component {
                 })(<Input type="password" prefix={<Icon type="key" />} />)}
                 </FormItem>
                 <Button type="primary" htmlType="submit">
-                    <Icon type="login"/> Log in
+                <Icon type="login"/> Log in
                 </Button>
               </Form>
             </Card>
@@ -75,4 +86,4 @@ class Login extends React.Component {
     }
 }
 
-export default connect(store => ({ isAuth: !!store.user.token }))(Form.create()(Login));
+export default connect(store => ({ isAuth: !!store.user.token }))(Form.create()(Registration));

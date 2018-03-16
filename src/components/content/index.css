@@ -7,6 +7,8 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-around; }
+    .content__buttons * {
+      margin-right: 20px; }
   .content__users-cards {
     width: 100%;
     padding-top: 2em;

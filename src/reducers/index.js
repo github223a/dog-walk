@@ -29,6 +29,14 @@ const users = (store = [], action) => {
         case actions.GET_USERS:
             return usersList.map(({ id, name, email }) => ({ id: id, name: name, email: email }));
 
+        case actions.ADD_USER:
+            const newUser = {};
+            for (let field in action.data) {
+                user[field] = action.data[field];
+            }
+            store.push(newUser)
+            return store;
+
         case actions.SAVE_USER:
             const list = store.map(item => {
                 if (item.id === action.id) {

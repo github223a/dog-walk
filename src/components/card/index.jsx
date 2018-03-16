@@ -17,12 +17,12 @@ class UserCard extends React.Component {
                 {this.props.email}
                 <div className="user-card__actions">
                   <Link to={`/edit/${id}`}>
-                      <span className="user-card__actions__edit" type="primary">
-                          <Icon type="edit" /> Edit
+                      <span className="user-card__actions__edit" >
+                          <Icon type="layout" />Edit
                       </span>
                   </Link>
-                    <span className="user-card__actions__delete" type="danger" onClick={this.handleDeleteClick(id)}>
-                        <Icon type="delete" /> Delete
+                    <span className="user-card__actions__delete" onClick={this.handleDeleteClick(id)} style={{ color: '#ff4d4d' }}>
+                        <Icon type="user-delete" /> Delete
                     </span>
                 </div>
             </Card>
