@@ -29,8 +29,20 @@ const users = (store = [], action) => {
         case actions.GET_USERS:
             return usersList.map(({ id, name, email }) => ({ id: id, name: name, email: email }));
 
-      case actions.DELETE_USER:
-          return store.filter(item => item.id !== action.id);
+        case actions.SAVE_USER:
+            const list = store.map(item => {
+                if (item.id === action.id) {
+                    for (let field in action.data) {
+                        item[field] = action.data[field];
+                    }
+                    return item;
+                }
+                return list;
+            });
+            return store;
+
+        case actions.DELETE_USER:
+            return store.filter(item => item.id !== action.id);
         default:
             return store;
     }
