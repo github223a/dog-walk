@@ -1,13 +1,14 @@
 import React from 'react';
 import { Card, Icon } from 'antd';
 import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
 import * as actions from '../../actions';
 
-export default class UserCard extends React.Component {
+class UserCard extends React.Component {
 
     handleDeleteClick = id => e => {
-        e.preventDefault();
-        this.props.dispatch(actions.deleteCard(id));
+      e.preventDefault();
+      this.props.dispatch(actions.deleteCard(id));
     }
 
     render() {
@@ -28,3 +29,6 @@ export default class UserCard extends React.Component {
         )
     }
 }
+
+export default connect()(UserCard);
+

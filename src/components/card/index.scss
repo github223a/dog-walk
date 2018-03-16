@@ -8,6 +8,11 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-around;
+
+    *:hover {
+      transform: rotate(10deg);
+      cursor: pointer;
+    }
   }
 
   //&:hover {

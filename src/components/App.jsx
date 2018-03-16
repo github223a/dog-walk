@@ -28,7 +28,7 @@ const App = () => (
     <Switch>
       <Route path="/login" component={Login} />
       <PrivateRoute path="/edit/:id" Component={EditCardForm} />
-      <PrivateRoute Component={Content} />
+      <PrivateRoute path='/' Component={Content} />
     </Switch>
   </Router>
 );

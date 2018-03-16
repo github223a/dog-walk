@@ -13,6 +13,9 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-around; }
+    .user-card__actions *:hover {
+      transform: rotate(10deg);
+      cursor: pointer; }
 
 @keyframes shadow {
   from {
